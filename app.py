@@ -9,6 +9,6 @@ def handler(event, context):
 
 
     print('[INFO] TABLE CREATED.')
-    df = pd.DataFrame(data)
+    df = pd.DataFrame(data, index=[0])
 
     print(df)
