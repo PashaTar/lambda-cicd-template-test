@@ -6,7 +6,6 @@ phases:
       - echo [INFO] LOGGING INTO AWS ECR...
       - echo [INFO] AWS VERSION
       - aws --version
-      - $(aws ecr get-login --region ap-southeast-2 --no-include-email)
       - ECR_REPO_URI=051387598870.dkr.ecr.ap-southeast-2.amazonaws.com/lambda-cicd-template-test
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=build-$(echo $CODEBUILD_BUILD_ID | awk -F":" '{print $2}')
