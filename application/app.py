@@ -6,6 +6,7 @@ import json
 def handler(event, context):
     data = {"name": "Pasha", "team": "fz"}
 
+    print('[INFO] TABLE CREATRED.')
     df = pd.DataFrame(data)
 
     print(df)
