@@ -24,6 +24,6 @@ phases:
       - echo [INFO] WRITING IMAGE DEFINITION FILE...
       - printf '[{"name":"app","imageUri":"%s"}]' $ECR_REPO_URI:$IMAGE_TAG > imagedefinitions.json
       - cat imagedefinitions.json
-  artifacts:
-    files: imagedefinitions.json
+artifacts:
+  files: imagedefinitions.json
 
