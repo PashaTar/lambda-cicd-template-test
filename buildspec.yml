@@ -9,7 +9,7 @@ phases:
       - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=${COMMIT_HASH:=latest}
-      - ECR_REPO_URI=$AWS_ACCOUNT_ID.dkr.ecr.AWS_DEFAULT_REGION.amazonaws.com/$AWS_ECR_REPO_NAME
+      - ECR_REPO_URI=$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$AWS_ECR_REPO_NAME
   build:
     commands:
       - echo [INFO] START BUILDING THE DOCKER IMAGE...
