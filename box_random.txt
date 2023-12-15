@@ -1,5 +1,5 @@
 
-##### buildspec original #####
+##### buildspec original ######
 version: 0.2
 
 phases:
